@@ -1,0 +1,100 @@
+Hibernate
+1.Hibernate is an open source persistent framework created by Gavin king in 2001.
+2.General meaning of hibernate is "sleep Mode", "lof off" or switch off.
+3.Hibernate is an Object-Relational Mapping(ORM) solution or tool for java.
+4.Hibernate is a collection of jar files with dedicated functionlaity.
+5.It is a powerful, high performance Object-Relational Persistence and Query service for
+any Java Application.
+6.Basically hibernate is use to connect with database.
+7.Hibernate maps Java Classes to database tables and from Java data types to SQL data
+ types.
+
+
+Advantages of Hibernate
+1.Hibernate takes care of mapping Java classes to database tables using XML files and 
+without writing any line of code.
+2.Provides simple APIs for storing and retrieving Java objects directly to and from the 
+database.
+3.If there is change in the database or in any table,then you need to change the XML file
+properties only
+4.Abstracts away the unfamiliar SQL types and provides a way to work around familiar Java
+Objects.
+5.Hibernate does not require an application server to operate.
+6.Manipulates Complex associations of objects of your database.
+7.Minimizes database access with smart fetching strategies.
+
+Maven Project
+File -> new -> other -> maven project
+Select a simple project
+GroupId -> Package
+ArtifactId -> Project
+
+Disadvantages with JDBC
+1.JDBC is a DB specific.
+2.JDBC does not support caching.
+3.In JDBC it is the responsibility of developer to handle JDBC result set and 
+convert to java object.
+4.JDBC does not supports “Lazy-Loading”.
+5.JDBC is a technology.
+6.In JDBC User is responsible for creation and closing the connections.
+7.Wont generate PK automatically.
+
+ORM- Object Relational Mapping
+1.When we work with an object-oriented system, there is a mismatch between the object model
+and the relational database.
+2.RDBMS represent data in a tabular format whereas object-oriented languages, such as
+Java represent it as an interconnected graph of objects.
+3.ORM stands for Object-Relational Mapping (ORM) .ORM is a kind of persistence s/w , 
+which acts like a bridge b/w java application and databases and transfer to from data in
+the form of objects.
+4.ORM internally uses JDBC, for communicating a java application with a database in order
+to transfer object b/w them.
+
+
+What is JPA ?
+1.JPA – Stands for Java Persistence API
+2.JPA is the Java standard for mapping Java objects to a relational database.
+3.Mapping Java objects to database tables and vice versa is called Object-relational 
+mapping(ORM).
+4.The Java Persistence API (JPA) is one possible approach to ORM. Via JPA the developer
+can map, store, update and retrieve data from relational databases to Java objects and
+vice versa.
+5.JPA can be used in Java-EE and Java-SE applications.
+6.JPA is a specification and several implementations are available. Popular 
+implementations are Hibernate, EclipseLink and Apache OpenJPA.
+
+Elements Of Hibernate:
+For creating the first hibernate application, we must know the elements of Hibernate
+architecture.
+
+They are as follows:
+1.EntityManagerFactory
+2.EntityManager
+3.EntityTransaction
+4.Query
+
+Persistence:
+1.Persistence class is used to load the XML file to JPA
+2.It is concrete class which has default constructer and many static methods.
+
+EntityMangerFactory:
+1.EntityMangerFactory object will be created per database using a separate
+persistence-unit element in persistence.xml file. So, when multiple databases are used, 
+then multiple EntityMangerFactory objects should be created.
+2.The EntityMangerFactory is a factory class used to get EntityManger object
+3.EntityMangerFactory is a thread safe.
+
+EntityManager:
+1.The EntityManager interface provides methods to insert, update and delete the object
+2.JPA with Hibernate EntityManager is not a thread safe
+3.It is factory of EntityTransaction, Query and Criteria
+4.It holds a first-level cache (mandatory) of data
+5.The main function of the EntityManager is to offer, create, read, and delete
+operations for instances of mapped entity classes.
+
+EntityTransaction:
+1.The EntityTransaction interface provides methods for transaction management.
+2.Transactions in Hibernate are handled by an underlying transaction manager and 
+transaction (fromJDBC).
+3.In hibernate framework, we have EntityTransaction Interface that defines the unit
+of work.
